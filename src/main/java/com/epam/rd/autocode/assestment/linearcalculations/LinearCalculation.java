@@ -1,5 +1,7 @@
 package com.epam.rd.autocode.assestment.linearcalculations;
 
+import java.util.Scanner;
+
 public class LinearCalculation {
 
     /**
@@ -8,7 +10,6 @@ public class LinearCalculation {
      * if the cars are distancing from each other. The given distance is equal
      * the sum of the initial distance + the general way, which was covered by cars;
      * the general way = time*total speed.
-     *
      * Example:
      * <pre>
      * V1 = 90 km/h; V2 = 110 km/h; S = 65 km; T = 3 h  =>  Distance = 665 km
@@ -18,12 +19,18 @@ public class LinearCalculation {
      *
      * @return the distance
      */
+
+
     public static double findCarsDistance(double car1Speed, double car2Speed, double initialDistance, double time) {
         // TODO Place your code here
-        return 0;
+        double distance = (car1Speed + car2Speed) * (time) + initialDistance;
+        return distance;
     }
 
     public static void main(String[] args) {
         System.out.println(findCarsDistance(90., 110., 65., 3.));
+        System.out.println(findCarsDistance(65.5, 90.4, 20.9, 1.5));
+        System.out.println(findCarsDistance(70., 85.6, 32.6, 2.));
+
     }
 }
